@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>Cohete de Agua - Fuerza X</title>
 </head>
+
 <body>
 
     <header>
@@ -28,13 +30,13 @@
 
         <section>
             <h2>Funcionamiento</h2>
-            <p>
+            <p id="justify">
                 Un <b>Cohete</b> se llena con una cierta cantidad de agua,
                 se le pone un corcho en la parte superior y se coloca en la <b>base de lanzamiento</b>.
-                <br>
+
                 La <b>Bomba de aire</b> se conecta al corcho y se bombea hasta que
                 la presión dentro del cohete es suficiente para expulsar el corcho.
-                <br>
+
                 El cohete se eleva y el agua sale por la parte inferior del cohete, lo que genera
                 una fuerza de reacción que impulsa el cohete hacia arriba.
 
@@ -49,10 +51,9 @@
 
         <div id="video_container">
             <div class="video in_place">
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_7Kti-AZXbY"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
+                <button id="quitarVideo" onclick="quitar()"></button>
+                <!-- <div class="video in_place"> -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_7Kti-AZXbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -69,26 +70,30 @@
 
         <section>
             <h2>Distancia alcanzada</h2>
+            <div class="imagenes">
+                <img id="calc" src="img/calc.jpg" alt="">
+            </div>
             <p>La distancia alcanzada por nuestro cohete de agua se puede calcular utilizando la siguiente fórmula:</p>
-            <p>d = (v^2 * sin(45)) / g</p>
+            <p>d = (vi^2 * sin(45)) / 2g</p>
             <p>Donde:</p>
             <ul>
                 <li>d: distancia alcanzada</li>
-                <li>v: velocidad inicial</li>
+                <li>vi: velocidad inicial</li>
                 <li>θ: ángulo de lanzamiento</li>
                 <li>g: aceleración debido a la gravedad</li>
             </ul>
-            <p>Puedes calcular la distancia utilizando los valores correspondientes en la fórmula.</p>
+            <p>La distancia alcanzada fue de <b>25.3831 m.</b></p>
         </section>
 
 
     </main>
 
     <footer>
-        <p>© 2023 - Fuerza X</p>
+        <p>© 2023 - Fuerza X - Proyecto transversal</p>
     </footer>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
