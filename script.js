@@ -1,5 +1,5 @@
 let video = document.getElementsByClassName("video")[0];
-let quitar = document.getElementById("quitarVideo");
+let quitarButton = document.getElementById("quitarVideo");
 let chekpoint = document.getElementsByClassName("video_checkpoint")[0];
 let chekpoint2 = document.getElementsByClassName("video_checkpoint")[1];
 let continuar = document.getElementById("continuar");
@@ -21,14 +21,14 @@ window.addEventListener("scroll", function() {
     if (isInViewport(chekpoint) || isInViewport(chekpoint2)) {
         video.classList.add("in_place");
         video.classList.remove("video_floating");
-        quitarVideo.style.display = "none";
         firstTime = false;
         buttonPressed = false
+        quitarVideo.style.opacity = "0";
     } else {
         if (firstTime == false && buttonPressed == false) {
             video.classList.add("video_floating");
             video.classList.remove("in_place");
-            quitarVideo.style.display = "block";
+            quitarVideo.style.opacity = "1";
         }
     }
 });
